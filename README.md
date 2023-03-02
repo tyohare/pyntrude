@@ -1,8 +1,10 @@
 # Pyntrude
 
-#Usage: python3 pyntrude.py <request_file> <payload_file> <error_keyword>
+Usage:
+    python3 pyntrude.py <request_file> <payload_file> <error_keyword>
 
-#Example: python3 pyntrude.py req.txt /usr/share/wordlists/seclists/Passwords/Common-Credentials/best1050.txt Invalid
+Example:
+    python3 pyntrude.py req.txt /usr/share/wordlists/seclists/Passwords/Common-Credentials/best1050.txt Invalid
 
 #Gathering a request file:
 1. Intercept the request you want to use with Burp Suite.
