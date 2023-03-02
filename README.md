@@ -1,9 +1,11 @@
 # Pyntrude
 
-Usage:
+#Usage:
+    
     python3 pyntrude.py <request_file> <payload_file> <error_keyword>
 
-Example:
+#Example:
+    
     python3 pyntrude.py req.txt /usr/share/wordlists/seclists/Passwords/Common-Credentials/best1050.txt Invalid
 
 #Gathering a request file:
