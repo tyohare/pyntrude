@@ -10,6 +10,8 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 proxies = {'http': 'http://127.0.0.1:8080', 'https': 'http://127.0.0.1:8080'}
 
 def intrude(s):
+        
+    
     filename = sys.argv[1]
 
     payload = sys.argv[2]
@@ -59,13 +61,25 @@ def intrude(s):
                 print("(+) Success with payload: " + current_line )
             else:
             	print("(-) Failed with payload: " + current_line )
-            	
+
 
 
 
 
 def main():
     s = requests.Session()
+
+    #if the user needs help
+    if sys.argv[1] == "--help":
+        print("Usage: python3 pyntrude.py <request_file> <payload_file> <error_keyword>")
+        print("Example: python3 pyntrude.py req.txt /usr/share/wordlists/seclists/Passwords/Common-Credentials/best1050.txt Invalid")
+        return
+    
+    #if the user provides insufficent arguments
+    if len(sys.argv) < 4:
+        print("Not enough arguments!")
+        print("Try: 'python3 pyntrude.py --help' for syntax")
+        return
 
     #Begin the intrusion!!!
     intrude(s)
