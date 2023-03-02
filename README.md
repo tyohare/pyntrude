@@ -11,7 +11,7 @@
 #Gathering a request file:
 1. Intercept the request you want to use with Burp Suite.
 2. Send the request to intruder.
-3. Mark your desired fuzzing parameters with the '§'.
+3. Mark your desired fuzzing parameters with the '§' character.
 4. Copy the resulting request into a text file.
 5. Profit
 
